@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">    
+    <title>大象点餐</title>
+    <link rel="stylesheet" href="css/zepto.fullpage.css">
+    <link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+<script type="text/javascript">
+(function () {
+			'use strict';
+      //获取设备宽度 并计算其与UI界面的比例并将其设置到html的style中作为rem值
+      var screenWidth;
+      var html = document.getElementsByTagName("html")[0];
+      if (window.innerWidth) {
+      	screenWidth = window.innerWidth;
+      } else if ((document.body) && (document.body.clientWidth)) {
+      	screenWidth = document.body.clientWidth;
+      }
+      html.style.fontSize = 100 * screenWidth / 750 + "px";
+  })();
+</script>
+    <header>
+		<div class="logo"></div>
+		<p>让餐厅速度飞起来</p>
+		<i class="iconfont icon-anniu" id="icon-font"></i>
+	</header>
+    <div class="nav" id="nav">
+        <ul id="nav-list">
+            <li><a href="index.html">大象点餐</a></li>
+            <li><a href="eleMerchants.html">大象商家</a></li>
+            <li><a href="eleService.html">大象服务商</a></li>
+            <li><a href="elePartners.html">大象伙伴</a></li>
+            <li><a href="aboutEle.html"  class="active">关于我们</a></li>
+        </ul>
+    </div>
+    <div class="wp">
+        <div class="wp-inner">
+            <div class="page page1">
+            <div class="fixed"></div>
+			<section>
+				<div class="contentTitle">
+					<div class="eleOrder">
+						<p>关于我们</p>
+						<span></span>
+						<p class="contain">大象点餐是一款基于互联网发展趋势、为餐饮店量身打造的轻量化智能营销管理系统。不同于复杂重型的在线网站订餐系统，大象点餐只需微信扫码即可一体化解决点餐、支付、收银、管理等多方面问题，让餐厅真正实现点餐自动化，提高餐厅效率、降低餐厅人力成本。</p>
+						<div class="banner"></div>
+					</div>
+				</div>
+			</section>
+            </div>
+            <div class="page page2">
+            <div class="fixed"></div>
+			<section>
+				<div class="contentTitle">
+					<div class="eleOrder">
+						<p>为什么选择大象点餐？</p>
+						<span></span>
+                        <div class="banner"></div>
+					</div>
+				</div>
+			</section>
+            </div>
+            <div class="page page3">
+            <div class="fixed">	</div>
+			<section>
+				<div class="contentTitle">
+					<div class="eleOrder">
+                        <div class="eleOrder">
+                            <p>全国招商热线</p>
+                            <span></span>
+                            <div class="tender-invitation">
+                                <div class="region">
+                                   <div class="region-left">
+                                        <i></i>
+                                        <b>北部</b>
+                                   </div>
+                                   <div class="region-right">
+                                       <p class="province">北京、天津、内蒙、河北、山东、山西、黑龙江、吉林、辽宁</p>
+                                       <p class="contactTitle">联系人及方式</p>
+                                       <p class="contactName">张强：18053145989</p>
+                                   </div>
+                                </div>
+                            </div>
+                             <div class="tender-invitation">
+                                <div class="region">
+                                   <div class="region-left">
+                                        <i></i>
+                                        <b>北部</b>
+                                   </div>
+                                   <div class="region-right">
+                                       <p class="province">陕西、甘肃、宁夏、山东、江苏、安徽、四川、重庆、河南</p>
+                                       <p class="contactTitle">联系人及方式</p>
+                                       <p class="contactName">江南：15668115177</p>
+                                   </div>
+                                </div>
+                            </div>
+                             <div class="tender-invitation" id="clear">
+                                <div class="region">
+                                   <div class="region-left">
+                                        <i></i>
+                                        <b>北部</b>
+                                   </div>
+                                   <div class="region-right">
+                                       <p class="province">上海、浙江，云南、江西、广东、福建、广西、贵州、湖北、湖南、海南</p>
+                                       <p class="contactTitle">联系人及方式</p>
+                                       <p class="contactName">罗鑫瑞：18675550045</p>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+					</div>
+				</div>
+			</section>
+            </div>
+        </div>
+    </div>
+    <span class="start"><b></b></span>
+    <script src="js/zepto.js"></script>
+    <script src="js/zepto.fullpage.js"></script>
+    <script>
+        // $('.wp-inner').fullpage();
+        $('.wp-inner').fullpage({
+            change: function (e) {
+                var arrUrl = ['images/abBanner1.png','images/abBanner2.png'];
+                var arrWidth = ['6.83rem','5.44rem'];
+                var arrHeight = ['5.69rem','6.41rem'];
+                var banner = document.querySelectorAll('.banner');
+                for(var i = 0;i<arrUrl.length;i++){
+                   banner[i].style.background="url("+arrUrl[i]+") no-repeat center center";
+                   banner[i].style.width = arrWidth[i];
+                   banner[i].style.height = arrHeight[i];
+                   banner[i].style.backgroundSize='cover';
+                }
+                console.log(e.cur);
+                e.cur==2?document.querySelector('.start').style.display='none':document.querySelector('.start').style.display='block';  
+            }
+        });
+    </script>
+    <script>
+        (function(window){
+            var flag = true;
+            var nav = document.querySelector("#nav");
+            var navList = document.querySelector('#nav-list');
+            document.querySelector('#icon-font').addEventListener('click',function(){
+                if(flag){
+                    nav.style.transform = "translateY(5.5rem)";
+                    flag=false;
+                }else{
+                    nav.style.transform = "translateY(-4.6rem)";
+                    flag = true;
+                }
+            });
+        })(window);
+    </script>
+</body>
+</html>

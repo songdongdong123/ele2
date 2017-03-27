@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">    
+    <title>大象点餐</title>
+    <link rel="stylesheet" href="css/zepto.fullpage.css">
+    <link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+<script type="text/javascript">
+(function () {
+			'use strict';
+      //获取设备宽度 并计算其与UI界面的比例并将其设置到html的style中作为rem值
+      var screenWidth;
+      var html = document.getElementsByTagName("html")[0];
+      if (window.innerWidth) {
+      	screenWidth = window.innerWidth;
+      } else if ((document.body) && (document.body.clientWidth)) {
+      	screenWidth = document.body.clientWidth;
+      }
+      console.log(screenWidth);
+      html.style.fontSize = 100 * screenWidth / 750 + "px";
+  })();
+</script>
+    <header>
+		<div class="logo"></div>
+		<p>让餐厅速度飞起来</p>
+		<i class="iconfont icon-anniu" id="icon-font"></i>
+	</header>
+    <div class="nav" id="nav">
+        <ul id="nav-list">
+            <li><a href="index.html">大象点餐</a></li>
+            <li><a href="eleMerchants.html">大象商家</a></li>
+            <li><a href="eleService.html">大象服务商</a></li>
+            <li><a href="elePartners.html" class="active">大象伙伴</a></li>
+            <li><a href="aboutEle.html">关于我们</a></li>
+        </ul>
+    </div>
+    <div class="wp">
+        <div class="wp-inner">
+            <div class="page page1">
+            <div class="fixed"></div>
+			<section>
+				<div class="contentTitle">
+					<div class="eleOrder">
+						<p>大象伙伴</p>
+						<span></span>
+						<p class="contain">作为一款针对地推人员量身定制的APP，大象伙伴简单易上手，地推员只需简单操作，即可快速帮助商户开户提单。此外，地推员亦可随时查看提单速度、商户营业数据，高效完成推广、维护工作。</p>
+						<div class="banner"></div>
+                        <div class="phone">
+                            <div class="android"></div>
+                            <div class="iPhone"></div>
+                        </div>
+					</div>
+				</div>
+			</section>
+            </div>
+            <div class="page page2">
+            <div class="fixed"></div>
+			<section>
+				<div class="contentTitle">
+					<div class="eleOrder">
+						<p>地推员开户流程</p>
+						<span></span>
+                        <div class="banner"></div>
+					</div>
+				</div>
+			</section>
+            </div>
+            <div class="page page3">
+            <div class="fixed">	</div>
+			<section>
+				<div class="contentTitle">
+					<div class="eleOrder">
+                        <div class="banner"></div>
+						<p class="tips">极速开户</p>
+						<p class="bottom-tips">不等待！手机随刻提单</p>
+						<p class="contain">告别低效率的传统开户模式，只需在手机APP进行简单操作即可完成所有开户工作。大大提高工作效率！</p>
+					</div>
+				</div>
+			</section>
+            </div>
+            <div class="page page4">
+            <div class="fixed"></div>
+			<section>
+				<div class="contentTitle">
+					<div class="eleOrder">
+                        <div class="banner"></div>
+						<p class="tips">资料管理</p>
+						<p class="bottom-tips">防丢失！商户资料一键保存</p>
+						<p class="contain">支持一键保存录入的商家资料，随时随地查看开户状态、开户资料，告别因粗心导致的资料丢失，随心所欲管理商户。</p>
+					</div>
+				</div>
+			</section>
+            </div>
+            <div class="page page5">
+            <div class="fixed"></div>
+			<section>
+				<div class="contentTitle">
+					<div class="eleOrder">
+                        <div class="banner"></div>
+						<p class="tips">推广统计</p>
+						<p class="bottom-tips">免计算！数据信息一览无余</p>
+						<p class="contain">系统自动记录地推员的开户数据及推广数据，方便随时随地查看，并支持查看商户营业数据信息。</p>
+					</div>
+				</div>
+			</section>
+            </div>
+        </div>
+    </div>
+    <span class="start"><b></b></span>
+    <script src="js/zepto.js"></script>
+    <script src="js/zepto.fullpage.js"></script>
+    <script>
+        // $('.wp-inner').fullpage();
+        $('.wp-inner').fullpage({
+            change: function (e) {
+                var arrUrl = ['images/partnerBanner1.png','images/partnerBanner2.png','images/partnerBanner3.png','images/partnerBanner4.png','images/partnerBanner5.png'];
+                var arrWidth = ['5.47rem','5.29rem','5.40rem','5.71rem','6.16rem'];
+                var arrHeight = ['4.86rem','8.13rem','4.99rem','4.65rem','4.91rem'];
+                var banner = document.querySelectorAll('.banner');
+                for(var i = 0;i<arrUrl.length;i++){
+                   banner[i].style.background="url("+arrUrl[i]+") no-repeat center center";
+                   banner[i].style.width = arrWidth[i];
+                   banner[i].style.height = arrHeight[i];
+                   banner[i].style.backgroundSize='cover';
+                }
+                console.log(e.cur);
+                 e.cur==4?document.querySelector('.start').style.display='none':document.querySelector('.start').style.display='block';  
+            }
+        });
+    </script>
+    <script>
+        (function(window){
+            var flag = true;
+            var nav = document.querySelector("#nav");
+            var navList = document.querySelector('#nav-list');
+            document.querySelector('#icon-font').addEventListener('click',function(){
+                if(flag){
+                    nav.style.transform = "translateY(5.4rem)";
+                    flag=false;
+                }else{
+                    nav.style.transform = "translateY(-4.5rem)";
+                    flag = true;
+                }
+            });
+        })(window);
+    </script>
+</body>
+</html>

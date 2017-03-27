@@ -1,0 +1,266 @@
+*{
+    margin:0;
+    padding: 0;
+}
+p i li{
+    font-family: "微软雅黑";
+    font-style: normal;
+}
+a{
+    text-decoration:none;
+    color:#ffffff;
+}
+ul{
+    list-style: none;
+    font-size: 0.37rem;
+    text-align: center;
+    height: 100%;
+}
+ul>li{
+    height: 1.1rem;
+    line-height: 1.1rem;
+    color: #fff;
+}
+.active{
+    color: #fb4c3e;
+}
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1490370759895'); /* IE9*/
+  src: url('iconfont.eot?t=1490370759895#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1490370759895') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1490370759895') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1490370759895#iconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:0.36rem;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-anniu:before { 
+    content: "\e677"; 
+    color: #fff;
+    margin-right:0.3rem; 
+ }
+header{
+    position: fixed;
+    width: 100%;
+    height: 0.9rem;
+    background-color:#fb4c3e;
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index: 1000;
+    overflow: hidden;
+}
+.fixed{
+    height: 0.9rem;
+    width: 100%;
+}
+.logo{
+    background:url(../images/logo.png) no-repeat center center;
+    background-size: cover;
+    width: 1.68rem;
+    height: 0.44rem;
+    margin-left: 0.3rem;
+}
+header p{
+    flex: 1;
+    margin-left: 0.20rem;
+    font-size: 0.1rem;
+    color: #fee3e1;
+    padding-left: 0.20rem;
+    border-left: 0.02rem solid #fee3e1;
+}
+.nav{
+    position: absolute;
+    top: -4.6rem;
+    right: 0rem;
+    width: 2.5rem;
+    height: 5.5rem;
+    background-color: rgba(89, 89, 89, 0.9);
+    transition: all 0.5s;
+    z-index: 999;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contentTitle .eleOrder{
+    font-size: 0.42rem;
+    margin-top: 0.7rem;
+    font-weight: bold;  
+    color: #555555;
+    flex: 1;
+    text-align: center;
+    
+}
+.contentTitle span{
+    display:inline-block;
+    width: 1.32rem;
+    border-bottom: 0.06rem solid #fb4c3e;
+    margin-bottom: 0.1rem;
+}
+.contentTitle .tips{
+    display:inline-block;
+    color: #fb4c3e;
+    font-size: 0.3rem;
+    line-height: 0.7rem;
+}
+.contentTitle .bottom-tips{
+    font-size: 0.34rem;
+    line-height: 0.7rem;
+}
+.contentTitle .contain{
+    width: 6.84rem;
+    font-size: 0.30rem;
+    line-height: 0.5rem;
+    text-align: left;
+    font-weight: normal;
+}
+.contentTitle .banner{
+    /*background:url(../images/banner1.png) no-repeat center center;*/
+    background-size: cover; 
+    width: 4.9rem;
+    height: 5.2rem;
+    margin: 1rem auto; 
+}
+.contentTitle .phone{
+    display: flex;
+    justify-content: space-between;
+}
+.contentTitle .phone .android{
+    background: url(../images/android.png) no-repeat center center;
+    width: 2.82rem;
+    height: 0.82rem;
+    background-size: cover;
+    margin-left: 0.2rem;
+}
+.contentTitle .phone .iPhone{
+    background: url(../images/iPhone.png) no-repeat center center;
+    width: 2.78rem;
+    height: 0.77rem;
+    background-size: cover;
+    margin-right: 0.2rem;
+}
+.tender-invitation{
+    width: 6.2rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 0.6rem;
+    border-bottom: 1px solid #dfdfdf;
+    padding-bottom: 0.56rem;
+}
+#clear{
+    border-bottom: none;
+}
+.tender-invitation .region{
+    display: flex;
+    justify-content: space-between;
+}
+.region .region-left{
+    margin-top: 0.2rem;
+}
+.region .region-left>i{
+    display: inline-block;
+    background: url(../images/abBanner3.png) no-repeat center center;
+    background-size: cover;
+    width: 0.85rem;
+    height: 0.85rem;
+}
+.region .region-left>b{
+    display: inline-block;
+    margin-top: 0.3rem;
+    color: #fb4c3e;
+}
+.region .region-right{
+    margin-left: 0.50rem;
+    text-align: left;
+    line-height: 0.47rem;
+}
+.region .region-right .province{
+    font-size: 0.28rem;
+    font-weight: normal;
+}
+.region .region-right .contactTitle{
+    margin-top: 0.2rem;
+    font-size: 0.35rem;
+}
+.region .region-right .contactName{
+    font-size: 0.3rem;
+    color: #fb4c3e;
+    font-weight: normal;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ .arrow-top{
+    display: inline-block;
+    width: 45px;
+    height:50px;
+    border-top: 2px solid #fb4c3e;
+    border-left: 2px solid #fb4c3e;
+    transform: rotate(45deg);
+}
+.wp{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;            
+}
+@keyframes start {
+    0% {
+        opacity: 0.2;
+        transform: translate(0,10px);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translate(0, -5px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, -10px);
+    }
+}
+@-webkit-keyframes start{
+    0% {
+        opacity: 0.2;
+        transform: translate(0,10px);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translate(0, -5px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, -10px);
+    }
+}
+ .start{
+    position: fixed;
+    left: 50%;
+    margin-left: -20px;
+    top: 95%;
+    margin-top: -34px;
+    width: 34px;
+    height: 34px;
+}
+ .start b{
+    position: absolute;
+    left: 50%;
+    top: 0px;
+    margin-left: -20px;
+    width: 49px;
+    height: 54px;
+    background: url(../images/arrow.png);
+    background-size: 100% 100%;
+    -webkit-animation: start 1.5s infinite ease-in-out;
+    animation: start 1.5s infinite ease-in-out;
+}

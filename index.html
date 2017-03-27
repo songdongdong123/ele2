@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">    
+    <title>大象点餐</title>
+    <link rel="stylesheet" href="css/zepto.fullpage.css">
+    <link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+<script type="text/javascript">
+(function () {
+			'use strict';
+      //获取设备宽度 并计算其与UI界面的比例并将其设置到html的style中作为rem值
+      var screenWidth;
+      var html = document.getElementsByTagName("html")[0];
+      if (window.innerWidth) {
+      	screenWidth = window.innerWidth;
+      } else if ((document.body) && (document.body.clientWidth)) {
+      	screenWidth = document.body.clientWidth;
+      }
+      html.style.fontSize = 100 * screenWidth / 750 + "px";
+  })();
+</script>
+    <header>
+		<div class="logo"></div>
+		<p>让餐厅速度飞起来</p>
+		<i class="iconfont icon-anniu" id="icon-font"></i>
+	</header>
+    <div class="nav" id="nav">
+        <ul id="nav-list">
+            <li><a href="index.html"  class="active">大象点餐</a></li>
+            <li><a href="eleMerchants.html">大象商家</a></li>
+            <li><a href="eleService.html">大象服务商</a></li>
+            <li><a href="elePartners.html">大象伙伴</a></li>
+            <li><a href="aboutEle.html">关于我们</a></li>
+        </ul>
+    </div>
+    <div class="wp">
+        <div class="wp-inner">
+            <div class="page page1">
+            <div class="fixed"></div>
+			<section>
+				<div class="contentTitle">
+					<div class="eleOrder">
+						<p>大象点餐</p>
+						<span></span>
+						<p class="contain">还在使用纷繁复杂的在线网站订餐系统？试试大象点餐！仅需一个二维码，即可让顾客轻松实现扫码点餐、在线支付、快速付款、支持微信支付，让餐厅真正实现微信点餐自动化，提高餐厅效率，降低餐厅人力成本，为餐厅开源节流！</p>
+						<div class="banner"></div>
+					</div>
+				</div>
+			</section>
+            </div>
+            <div class="page page2">
+            <div class="fixed"></div>
+			<section>
+				<div class="contentTitle">
+					<div class="eleOrder">
+                        <div class="banner"></div>
+						<p>扫码点餐</p>
+						<p class="tips">实现无服务员就餐</p>
+						<p class="contain">顾客扫描桌牌二维码即可在线浏览店家的菜品，实现在无服务员的情况下完成点菜、下单、付款等操作。提高用户体验的同时节省点菜时间、提高翻台率、实现销售业绩增长</p>
+					</div>
+				</div>
+			</section>
+            </div>
+            <div class="page page3">
+            <div class="fixed">	</div>
+			<section>
+				<div class="contentTitle">
+					<div class="eleOrder">
+                        <div class="banner"></div>
+						<p>扫码支付</p>
+						<p class="tips">快速收款，零收银员</p>
+						<p class="contain">顾客就餐时，可通过扫码输入消费金额完成支付，支持微信支付，更便捷，更高效。告别找零尴尬、提升用户体验，同时大大降低餐厅的人力成本。</p>
+					</div>
+				</div>
+			</section>
+            </div>
+            <div class="page page4">
+            <div class="fixed"></div>
+			<section>
+				<div class="contentTitle">
+					<div class="eleOrder">
+                        <div class="banner"></div>
+						<p>历史订单</p>
+						<p class="tips">轻松查看，智能管理</p>
+						<p class="contain">一键获取用户在平台、包含扫码支付订单和扫码点餐订单在内的全部订单，随时查看，轻松管理</p>
+					</div>
+				</div>
+			</section>
+            </div>
+            <div class="page page4">
+            <div class="fixed">
+				
+			</div>
+			<section>
+				<div class="contentTitle">
+					<div class="eleOrder">
+                        <div class="banner"></div>
+					</div>
+				</div>
+			</section>
+            </div>
+        </div>
+    </div>
+    <span class="start"><b></b></span>
+    <script src="js/zepto.js"></script>
+    <script src="js/zepto.fullpage.js"></script>
+    <script>
+        // $('.wp-inner').fullpage();
+        $('.wp-inner').fullpage({
+            change: function (e) {
+                var arrUrl = ['images/banner1.png','images/banner2.png','images/banner3.png','images/banner4.png','images/banner5.png'];
+                var arrWidth = ['4.9rem','5.24rem','4.94rem','5.27rem','4.59rem'];
+                var arrHeight = ['5.2rem','5.12rem','4.91rem','4.59rem','9.7rem'];
+                var banner = document.querySelectorAll('.banner');
+                for(var i = 0;i<arrUrl.length;i++){
+                   banner[i].style.background="url("+arrUrl[i]+") no-repeat center center";
+                   banner[i].style.width = arrWidth[i];
+                   banner[i].style.height = arrHeight[i];
+                   banner[i].style.backgroundSize='cover';
+                }
+                console.log(e.cur);
+                 e.cur==4?document.querySelector('.start').style.display='none':document.querySelector('.start').style.display='block';  
+            }
+        });
+    </script>
+    <script>
+        (function(window){
+            var flag = true;
+            var nav = document.querySelector("#nav");
+            var navList = document.querySelector('#nav-list');
+            document.querySelector('#icon-font').addEventListener('click',function(){
+                if(flag){
+                    nav.style.transform = "translateY(5.5rem)";
+                    flag=false;
+                }else{
+                    nav.style.transform = "translateY(-4.6rem)";
+                    flag = true;
+                }
+            });
+        })(window);
+    </script>
+</body>
+</html>

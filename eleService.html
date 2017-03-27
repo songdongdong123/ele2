@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">    
+    <title>大象点餐</title>
+    <link rel="stylesheet" href="css/zepto.fullpage.css">
+    <link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+<script type="text/javascript">
+(function () {
+			'use strict';
+      //获取设备宽度 并计算其与UI界面的比例并将其设置到html的style中作为rem值
+      var screenWidth;
+      var html = document.getElementsByTagName("html")[0];
+      if (window.innerWidth) {
+      	screenWidth = window.innerWidth;
+      } else if ((document.body) && (document.body.clientWidth)) {
+      	screenWidth = document.body.clientWidth;
+      }
+      html.style.fontSize = 100 * screenWidth / 750 + "px";
+  })();
+</script>
+    <header>
+		<div class="logo"></div>
+		<p>让餐厅速度飞起来</p>
+		<i class="iconfont icon-anniu" id="icon-font"></i>
+	</header>
+    <div class="nav" id="nav">
+        <ul id="nav-list">
+            <li><a href="index.html">大象点餐</a></li>
+            <li><a href="eleMerchants.html">大象商家</a></li>
+            <li><a href="eleService.html" class="active">大象服务商</a></li>
+            <li><a href="elePartners.html">大象伙伴</a></li>
+            <li><a href="aboutEle.html">关于我们</a></li>
+        </ul>
+    </div>
+    <div class="wp">
+        <div class="wp-inner">
+            <div class="page page1">
+            <div class="fixed"></div>
+			<section>
+				<div class="contentTitle">
+					<div class="eleOrder">
+						<p>大象服务商管理系统</p>
+						<span></span>
+						<p class="contain">该系统为大象点餐的服务商量身定制，不仅能轻松解决商户、财务、员工等多方面的管理问题，还能永久保存客户资料及相关信息不丢失，快速销售业绩，杜绝因员工离职导致客户流失，并有效促进团队协作。</p>
+						<div class="banner"></div>
+					</div>
+				</div>
+			</section>
+            </div>
+            <div class="page page2">
+            <div class="fixed"></div>
+			<section>
+				<div class="contentTitle">
+					<div class="eleOrder">
+                        <div class="banner"></div>
+						<p class="tips">资料丢失导致客户流失？</p>
+						<p class="bottom-tips">完整的记录所有客户资料，永不丢失</p>
+						<p class="contain">完善的商户管理功能，每一个商户的详细资料、流水详情、消费详情都一目了然，取代Excel或笔记本。完全不用担心资料丢失、员工离职导致的客户流失。</p>
+					</div>
+				</div>
+			</section>
+            </div>
+            <div class="page page3">
+            <div class="fixed">	</div>
+			<section>
+				<div class="contentTitle">
+					<div class="eleOrder">
+                        <div class="banner"></div>
+						<p class="tips">担心服务费不够透明？</p>
+						<p class="bottom-tips">账户资产自主提现，异议申请避开失误</p>
+						<p class="contain">账户资产情况一览无余，服务商每月可自主提现，并支持对结算金额有异议的结算单提交申请。一键管理历史服务结算，更透明、更高效！</p>
+					</div>
+				</div>
+			</section>
+            </div>
+            <div class="page page4">
+            <div class="fixed"></div>
+			<section>
+				<div class="contentTitle">
+					<div class="eleOrder">
+                        <div class="banner"></div>
+						<p class="tips">团队合作不够高效？</p>
+						<p class="bottom-tips">一键管理，自定义分配下级权限</p>
+						<p class="contain">服务商可对员工、地推员或下级服务商分配相应的权限，并对其进行管理。实时掌控下属的工作情况，有效促进成员间共享协作。</p>
+					</div>
+				</div>
+			</section>
+            </div>
+            <div class="page page5">
+            <div class="fixed"></div>
+			<section>
+				<div class="contentTitle">
+					<div class="eleOrder">
+                        <div class="banner"></div>
+						<p class="tips">无法及时收到产品信息？</p>
+						<p class="bottom-tips">实时同步，公告知识库双加持</p>
+						<p class="contain">担心自己与市场脱节？最新产品公告、业务知识、经典案例、最热门浏览等诸多干货实时更新，工作也能长知识！</p>
+					</div>
+				</div>
+			</section>
+            </div>
+            <div class="page page5">
+            <div class="fixed"></div>
+			<section>
+				<div class="contentTitle">
+					<div class="eleOrder">
+						<p>大象服务商管理系统能做什么？</p>
+						<span></span>
+						<div class="banner"></div>
+					</div>
+				</div>
+			</section>
+            </div>
+        </div>
+    </div>
+    <span class="start"><b></b></span>
+    <script src="js/zepto.js"></script>
+    <script src="js/zepto.fullpage.js"></script>
+    <script>
+        // $('.wp-inner').fullpage();
+        $('.wp-inner').fullpage({
+            change: function (e) {
+                var arrUrl = ['images/serverBanner1.png','images/serverBanner2.png','images/serverBanner3.png','images/serverBanner4.png','images/serverBanner5.png','images/serverBanner6.png'];
+                var arrWidth = ['6.31rem','6.11rem','5.48rem','5.67rem','5.75rem','4.49rem'];
+                var arrHeight = ['3.26rem','3.75rem','4.65rem','4.27rem','3.32rem','6.50rem'];
+                var banner = document.querySelectorAll('.banner');
+                for(var i = 0;i<arrUrl.length;i++){
+                   banner[i].style.background="url("+arrUrl[i]+") no-repeat center center";
+                   banner[i].style.width = arrWidth[i];
+                   banner[i].style.height = arrHeight[i];
+                   banner[i].style.backgroundSize='cover';
+                }
+                console.log(e.cur);
+                 e.cur==5?document.querySelector('.start').style.display='none':document.querySelector('.start').style.display='block';  
+            }
+        });
+    </script>
+    <script>
+        (function(window){
+            var flag = true;
+            var nav = document.querySelector("#nav");
+            var navList = document.querySelector('#nav-list');
+            document.querySelector('#icon-font').addEventListener('click',function(){
+                if(flag){
+                    nav.style.transform = "translateY(5.5rem)";
+                    flag=false;
+                }else{
+                    nav.style.transform = "translateY(-4.6rem)";
+                    flag = true;
+                }
+            });
+        })(window);
+    </script>
+</body>
+</html>
