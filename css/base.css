@@ -2,6 +2,7 @@
     margin:0;
     padding: 0;
 }
+/*hahh*/
 p i li{
     font-family: "微软雅黑";
     font-style: normal;
@@ -69,7 +70,7 @@ header{
 header p{
     flex: 1;
     margin-left: 0.20rem;
-    font-size: 0.1rem;
+    font-size: 0.18rem;
     color: #fee3e1;
     padding-left: 0.20rem;
     border-left: 0.02rem solid #fee3e1;
@@ -116,17 +117,13 @@ section{
 }
 .contentTitle .contain{
     width: 6.84rem;
-    font-size: 0.30rem;
-    line-height: 0.5rem;
+    font-size: 0.24rem;
+    line-height: 0.4rem;
     text-align: left;
     font-weight: normal;
 }
 .contentTitle .banner{
-    /*background:url(../images/banner1.png) no-repeat center center;*/
-    background-size: cover; 
-    width: 4.9rem;
-    height: 5.2rem;
-    margin: 1rem auto; 
+    margin: 0.4rem auto; 
 }
 .contentTitle .phone{
     display: flex;
@@ -147,12 +144,13 @@ section{
     margin-right: 0.2rem;
 }
 .tender-invitation{
-    width: 6.2rem;
+    width: 6.144rem;
+    height: 2.16rem;
     display: flex;
     justify-content: center;
-    margin-top: 0.6rem;
+    margin-top: 0.4rem;
     border-bottom: 1px solid #dfdfdf;
-    padding-bottom: 0.56rem;
+    padding-bottom: 0.60rem;
 }
 #clear{
     border-bottom: none;
@@ -162,7 +160,9 @@ section{
     justify-content: space-between;
 }
 .region .region-left{
-    margin-top: 0.2rem;
+    margin-top: 0.1rem;
+    width: 0.90rem;
+    height: 1.58rem;
 }
 .region .region-left>i{
     display: inline-block;
@@ -179,18 +179,20 @@ section{
 .region .region-right{
     margin-left: 0.50rem;
     text-align: left;
-    line-height: 0.47rem;
 }
 .region .region-right .province{
-    font-size: 0.28rem;
+    width: 4.82rem;
+    font-size: 0.26rem;
     font-weight: normal;
+    line-height: 0.42rem;
 }
 .region .region-right .contactTitle{
-    margin-top: 0.2rem;
-    font-size: 0.35rem;
+    margin-top: 0.27rem;
+    font-size: 0.30rem;
 }
 .region .region-right .contactName{
-    font-size: 0.3rem;
+    font-size: 0.24rem;
+    line-height: 0.44rem;
     color: #fb4c3e;
     font-weight: normal;
 }
